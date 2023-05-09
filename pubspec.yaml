@@ -56,7 +56,7 @@ dependencies:
   intl: any
   just_audio: ^0.9.30
   just_audio_mpv: ^0.1.6
-  keyboard_shortcuts: ^0.1.4
+  keyboard_shortcuts: ^0.1.1
   latlong2: ^0.8.1
   matrix: ^0.18.0
   matrix_homeserver_recommendations: ^0.3.0
