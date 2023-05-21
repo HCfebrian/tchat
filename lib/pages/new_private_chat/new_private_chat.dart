@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:device_info_plus/device_info_plus.dart';
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import  '../../pages/new_private_chat/new_private_chat_view.dart';

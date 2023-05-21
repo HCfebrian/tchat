@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:badges/badges.dart';
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:keyboard_shortcuts/keyboard_shortcuts.dart';
 import 'package:vrouter/vrouter.dart';
 

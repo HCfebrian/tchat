@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:animations/animations.dart';
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import  '../../pages/chat_list/chat_list.dart';

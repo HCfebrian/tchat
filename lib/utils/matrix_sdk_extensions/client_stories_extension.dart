@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:adaptive_dialog/adaptive_dialog.dart';
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import  '../../utils/matrix_sdk_extensions/matrix_locals.dart';

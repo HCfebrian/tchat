@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import  '../../utils/url_launcher.dart';

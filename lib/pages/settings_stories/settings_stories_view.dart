@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 
 import  '../../pages/settings_stories/settings_stories.dart';
 import  '../../utils/localized_exception_extension.dart';

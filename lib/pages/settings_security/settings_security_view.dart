@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../gen_l10n/l10n.dart';
+import 'package:tchat/gen_l10n/l10n.dart';
 import 'package:vrouter/vrouter.dart';
 
 import  '../../utils/beautify_string_extension.dart';
