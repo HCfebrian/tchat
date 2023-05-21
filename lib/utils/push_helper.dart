@@ -8,12 +8,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:matrix/matrix.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../config/app_config.dart';
-import '../config/setting_keys.dart';
-import '../../utils/client_manager.dart';
-import '../../../utils/matrix_sdk_extensions/matrix_locals.dart';
-import '../../utils/platform_infos.dart';
-import '../../utils/voip/callkeep_manager.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/utils/client_manager.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/voip/callkeep_manager.dart';
 
 Future<void> pushHelper(
   PushNotification notification, {
@@ -82,7 +82,7 @@ Future<void> _tryPushHelper(
   if (!isBackgroundMessage &&
       activeRoomId == notification.roomId &&
       activeRoomId != null &&
-      client?.syncPresence == null) {
+      client.syncPresence == null) {
     Logs().v('Room is in foreground. Stop push helper here.');
     return;
   }
@@ -144,7 +144,7 @@ Future<void> _tryPushHelper(
     return;
   }
 
-  l10n ??= await L10n.delegate.load(window.locale);
+  l10n ??= await L10n.delegate.load(PlatformDispatcher.instance.locale);
   final matrixLocals = MatrixLocals(l10n);
 
   // Calculate the body

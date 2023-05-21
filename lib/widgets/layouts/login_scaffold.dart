@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../config/themes.dart';
-import '../../config/app_config.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/config/themes.dart';
 
 class LoginScaffold extends StatelessWidget {
   final Widget body;

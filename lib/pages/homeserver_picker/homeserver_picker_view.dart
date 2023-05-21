@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../../config/app_config.dart';
-import '../../widgets/layouts/login_scaffold.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import '../../config/themes.dart';
 import 'homeserver_app_bar.dart';
 import 'homeserver_picker.dart';

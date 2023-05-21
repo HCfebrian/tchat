@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/l10n.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/matrix.dart';
-import 'package:matrix_link_text/link_text.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../utils/url_launcher.dart';
-import '../../../widgets/mxc_image.dart';
-import '../../../widgets/matrix.dart';
-import '../../utils/localized_exception_extension.dart';
-import 'avatar.dart';
+import 'package:fluffychat/utils/url_launcher.dart';
+import 'package:fluffychat/widgets/avatar.dart';
+import 'package:fluffychat/widgets/matrix.dart';
+import '../utils/localized_exception_extension.dart';
 
 class PublicRoomBottomSheet extends StatelessWidget {
   final String? roomAlias;
@@ -154,14 +153,15 @@ class PublicRoomBottomSheet extends StatelessWidget {
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
-                    subtitle: LinkText(
+                    subtitle: Linkify(
                       text: profile!.topic!,
                       linkStyle: const TextStyle(color: Colors.blueAccent),
-                      textStyle: TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         color: Theme.of(context).textTheme.bodyMedium!.color,
                       ),
-                      onLinkTap: (url) => UrlLauncher(context, url).launchUrl(),
+                      onOpen: (url) =>
+                          UrlLauncher(context, url.url).launchUrl(),
                     ),
                   ),
               ],

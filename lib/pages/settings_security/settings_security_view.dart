@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../utils/beautify_string_extension.dart';
-import '../../utils/platform_infos.dart';
-import '../../widgets/layouts/max_width_body.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/utils/beautify_string_extension.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/widgets/layouts/max_width_body.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import 'settings_security.dart';
 
 class SettingsSecurityView extends StatelessWidget {

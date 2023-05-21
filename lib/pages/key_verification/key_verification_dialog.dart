@@ -10,9 +10,8 @@ import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/encryption.dart';
 import 'package:matrix/matrix.dart';
 
-import '../../utils/adaptive_bottom_sheet.dart';
-import '../../../widgets/mxc_image.dart';
-import '../../widgets/avatar.dart';
+import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
+import 'package:fluffychat/widgets/avatar.dart';
 
 class KeyVerificationDialog extends StatefulWidget {
   Future<void> show(BuildContext context) => showAdaptiveBottomSheet(
@@ -376,7 +375,7 @@ class _Emoji extends StatelessWidget {
       sasEmoji[emoji.number]['translated_descriptions'],
     );
     translations['en'] = emoji.name;
-    for (final locale in window.locales) {
+    for (final locale in PlatformDispatcher.instance.locales) {
       final wantLocaleParts = locale.toString().split('_');
       final wantLanguage = wantLocaleParts.removeAt(0);
       for (final haveLocale in translations.keys) {

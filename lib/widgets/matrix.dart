@@ -22,17 +22,17 @@ import 'package:universal_html/html.dart' as html;
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../utils/client_manager.dart';
-import '../../utils/localized_exception_extension.dart';
-import '../../utils/platform_infos.dart';
-import '../../utils/uia_request_manager.dart';
-import '../../utils/voip_plugin.dart';
-import '../../../config/app_config.dart';
+import 'package:fluffychat/utils/client_manager.dart';
+import 'package:fluffychat/utils/localized_exception_extension.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/uia_request_manager.dart';
+import 'package:fluffychat/utils/voip_plugin.dart';
+import '../config/app_config.dart';
 import '../config/setting_keys.dart';
-import '../../pages/key_verification/key_verification_dialog.dart';
-import '../../utils/account_bundles.dart';
-import '../../utils/background_push.dart';
-import '../../utils/famedlysdk_store.dart';
+import '../pages/key_verification/key_verification_dialog.dart';
+import '../utils/account_bundles.dart';
+import '../utils/background_push.dart';
+import '../utils/famedlysdk_store.dart';
 import 'local_notifications_extension.dart';
 
 // import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -244,8 +244,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
 
   bool webHasFocus = true;
 
-  String? get activeRoomId =>
-      VRouter.of(navigatorContext).pathParameters['roomid'];
+  String? get activeRoomId => navigatorContext.vRouter.pathParameters['roomid'];
 
   final linuxNotifications =
       PlatformInfos.isLinux ? NotificationsClient() : null;

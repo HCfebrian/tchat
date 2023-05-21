@@ -5,13 +5,13 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
-import '../../pages/new_private_chat/new_private_chat_view.dart';
-import '../../pages/new_private_chat/qr_scanner_modal.dart';
-import '../../utils/adaptive_bottom_sheet.dart';
-import '../../utils/fluffy_share.dart';
-import '../../utils/platform_infos.dart';
-import '../../utils/url_launcher.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/pages/new_private_chat/new_private_chat_view.dart';
+import 'package:fluffychat/pages/new_private_chat/qr_scanner_modal.dart';
+import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
+import 'package:fluffychat/utils/fluffy_share.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/url_launcher.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 
 class NewPrivateChat extends StatefulWidget {
   const NewPrivateChat({Key? key}) : super(key: key);

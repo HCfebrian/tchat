@@ -13,14 +13,14 @@ import 'package:matrix/matrix.dart';
 import 'package:matrix_homeserver_recommendations/matrix_homeserver_recommendations.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../../config/app_config.dart';
-import '../../pages/homeserver_picker/homeserver_bottom_sheet.dart';
-import '../../pages/homeserver_picker/homeserver_picker_view.dart';
-import '../../utils/adaptive_bottom_sheet.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/pages/homeserver_picker/homeserver_bottom_sheet.dart';
+import 'package:fluffychat/pages/homeserver_picker/homeserver_picker_view.dart';
+import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../../utils/localized_exception_extension.dart';
 
-import '../../utils/tor_stub.dart'
+import 'package:fluffychat/utils/tor_stub.dart'
     if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 
 class HomeserverPicker extends StatefulWidget {

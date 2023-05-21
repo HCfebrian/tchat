@@ -7,10 +7,9 @@ import 'package:matrix/encryption.dart';
 import 'package:matrix/matrix.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../pages/chat_encryption_settings/chat_encryption_settings_view.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/pages/chat_encryption_settings/chat_encryption_settings_view.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../key_verification/key_verification_dialog.dart';
-import 'chat_encryption_settings_view.dart';
 
 class ChatEncryptionSettings extends StatefulWidget {
   const ChatEncryptionSettings({Key? key}) : super(key: key);

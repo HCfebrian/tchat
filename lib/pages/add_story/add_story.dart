@@ -11,14 +11,14 @@ import 'package:matrix/matrix.dart';
 import 'package:video_player/video_player.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../pages/add_story/add_story_view.dart';
+import 'package:fluffychat/pages/add_story/add_story_view.dart';
+import 'package:fluffychat/pages/add_story/invite_story_page.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:fluffychat/utils/resize_image.dart';
+import 'package:fluffychat/utils/story_theme_data.dart';
+import 'package:fluffychat/utils/string_color.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../../utils/matrix_sdk_extensions/client_stories_extension.dart';
-import '../../pages/add_story/invite_story_page.dart';
-import '../../utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import '../../utils/resize_image.dart';
-import '../../utils/story_theme_data.dart';
-import '../../../utils/string_color.dart';
-import '../../widgets/matrix.dart';
 
 class AddStoryPage extends StatefulWidget {
   const AddStoryPage({Key? key}) : super(key: key);

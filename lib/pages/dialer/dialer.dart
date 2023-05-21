@@ -30,10 +30,9 @@ import 'package:matrix/matrix.dart';
 import 'package:vibration/vibration.dart';
 import 'package:wakelock/wakelock.dart';
 
-import '../../../utils/matrix_sdk_extensions/matrix_locals.dart';
-import '../../utils/platform_infos.dart';
-import '../../../widgets/mxc_image.dart';
-import '../../widgets/avatar.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/widgets/avatar.dart';
 import 'pip/pip_view.dart';
 
 class _StreamView extends StatelessWidget {

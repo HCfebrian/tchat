@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:vrouter/vrouter.dart';
 
-import '../../config/themes.dart';
+import 'package:fluffychat/config/themes.dart';
 
 class SideViewLayout extends StatelessWidget {
   final Widget mainView;

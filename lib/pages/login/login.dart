@@ -8,8 +8,8 @@ import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/matrix.dart';
 
-import '../../utils/localized_exception_extension.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/utils/localized_exception_extension.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../../utils/platform_infos.dart';
 import 'login_view.dart';
 
@@ -248,12 +248,25 @@ class LoginController extends State<Login> {
   Widget build(BuildContext context) => LoginView(this);
 }
 
+
+// =========================
 class LoginCustom extends Login {
   const LoginCustom({Key? key}) : super(key: key);
 
   @override
-  LoginController createState() => LoginController();
+  LoginController createState() => LoginControllerCustom();
 }
+
+class LoginControllerCustom extends LoginController{
+  @override
+  void login() {
+    // TODO: implement login
+    super.login();
+  }
+
+}
+
+
 
 
 

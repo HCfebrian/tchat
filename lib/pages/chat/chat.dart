@@ -19,18 +19,19 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../pages/chat/chat_view.dart';
-import '../../../pages/chat/event_info_dialog.dart';
-import '../../pages/chat/recording_dialog.dart';
-import '../../utils/adaptive_bottom_sheet.dart';
-import '../../utils/matrix_sdk_extensions/event_extension.dart';
-import '../../utils/matrix_sdk_extensions/ios_badge_client_extension.dart';
-import '../../utils/matrix_sdk_extensions/matrix_locals.dart';
-import '../../utils/platform_infos.dart';
-import '../../widgets/matrix.dart';
-import '../../../utils/account_bundles.dart';
-import '../../../utils/localized_exception_extension.dart';
-import '../../../utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:fluffychat/pages/chat/chat_view.dart';
+import 'package:fluffychat/pages/chat/event_info_dialog.dart';
+import 'package:fluffychat/pages/chat/recording_dialog.dart';
+import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
+import 'package:fluffychat/utils/error_reporter.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/ios_badge_client_extension.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/widgets/matrix.dart';
+import '../../utils/account_bundles.dart';
+import '../../utils/localized_exception_extension.dart';
+import '../../utils/matrix_sdk_extensions/matrix_file_extension.dart';
 import 'send_file_dialog.dart';
 import 'send_location_dialog.dart';
 import 'sticker_picker_dialog.dart';
@@ -151,7 +152,10 @@ class ChatController extends State<ChatPageWithRoom> {
 
   Event? editEvent;
 
-  bool showScrollDownButton = false;
+  bool _scrolledUp = false;
+
+  bool get showScrollDownButton =>
+      _scrolledUp || timeline?.allowNewEvent == false;
 
   bool get selectMode => selectedEvents.isNotEmpty;
 
@@ -247,11 +251,10 @@ class ChatController extends State<ChatPageWithRoom> {
       requestFuture();
     }
     if (timeline?.allowNewEvent == false ||
-        scrollController.position.pixels > 0 && showScrollDownButton == false) {
-      setState(() => showScrollDownButton = true);
-    } else if (scrollController.position.pixels == 0 &&
-        showScrollDownButton == true) {
-      setState(() => showScrollDownButton = false);
+        scrollController.position.pixels > 0 && _scrolledUp == false) {
+      setState(() => _scrolledUp = true);
+    } else if (scrollController.position.pixels == 0 && _scrolledUp == true) {
+      setState(() => _scrolledUp = false);
     }
   }
 
@@ -272,7 +275,10 @@ class ChatController extends State<ChatPageWithRoom> {
     super.initState();
     sendingClient = Matrix.of(context).client;
     readMarkerEventId = room.fullyRead;
-    loadTimelineFuture = _getTimeline(eventContextId: readMarkerEventId);
+    loadTimelineFuture =
+        _getTimeline(eventContextId: readMarkerEventId).onError(
+      ErrorReporter(context, 'Unable to load timeline').onErrorCallback,
+    );
   }
 
   void updateView() {
@@ -351,7 +357,7 @@ class ChatController extends State<ChatPageWithRoom> {
     eventId ??= timeline.events.first.eventId;
     Logs().v('Set read marker...', eventId);
     // ignore: unawaited_futures
-    _setReadMarkerFuture = timeline.setReadMarker(eventId).then((_) {
+    _setReadMarkerFuture = timeline.setReadMarker(eventId: eventId).then((_) {
       _setReadMarkerFuture = null;
     });
     room.client.updateIosBadge();
@@ -378,7 +384,12 @@ class ChatController extends State<ChatPageWithRoom> {
     }
     // then cancel the old timeline
     // fixes bug with read reciepts and quick switching
-    loadTimelineFuture = _getTimeline(eventContextId: room.fullyRead);
+    loadTimelineFuture = _getTimeline(eventContextId: room.fullyRead).onError(
+      ErrorReporter(
+        context,
+        'Unable to load timeline after changing sending Client',
+      ).onErrorCallback,
+    );
 
     // then set the new sending client
     setState(() => sendingClient = c);
@@ -805,9 +816,13 @@ class ChatController extends State<ChatPageWithRoom> {
     if (eventIndex == -1) {
       setState(() {
         timeline = null;
+        _scrolledUp = false;
         loadTimelineFuture = _getTimeline(
           eventContextId: eventId,
           timeout: const Duration(seconds: 30),
+        ).onError(
+          ErrorReporter(context, 'Unable to load timeline after scroll to ID')
+              .onErrorCallback,
         );
       });
       await loadTimelineFuture;
@@ -827,7 +842,11 @@ class ChatController extends State<ChatPageWithRoom> {
     if (!timeline!.allowNewEvent) {
       setState(() {
         timeline = null;
-        loadTimelineFuture = _getTimeline();
+        _scrolledUp = false;
+        loadTimelineFuture = _getTimeline().onError(
+          ErrorReporter(context, 'Unable to load timeline after scroll down')
+              .onErrorCallback,
+        );
       });
       await loadTimelineFuture;
       setReadMarker(eventId: timeline!.events.first.eventId);

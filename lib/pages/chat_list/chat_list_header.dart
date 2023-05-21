@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 
-import '../../../config/app_config.dart';
-import '../../config/themes.dart';
-import '../../pages/chat_list/chat_list.dart';
-import '../../pages/chat_list/client_chooser_button.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/config/themes.dart';
+import 'package:fluffychat/pages/chat_list/chat_list.dart';
+import 'package:fluffychat/pages/chat_list/client_chooser_button.dart';
 import '../../widgets/matrix.dart';
 
 class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {

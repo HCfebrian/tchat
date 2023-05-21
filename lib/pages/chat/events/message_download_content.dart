@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:matrix/matrix.dart';
-import '../../../utils/matrix_sdk_extensions/event_extension.dart';
 
+import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
 
 class MessageDownloadContent extends StatelessWidget {
   final Event event;
@@ -37,14 +37,17 @@ class MessageDownloadContent extends StatelessWidget {
                   color: textColor,
                 ),
                 const SizedBox(width: 16),
-                Text(
-                  filename,
-                  maxLines: 1,
-                  style: TextStyle(
-                    color: textColor,
-                    fontWeight: FontWeight.bold,
+                Flexible(
+                  child: Text(
+                    filename,
+                    maxLines: 1,
+                    style: TextStyle(
+                      color: textColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                ),
+                )
               ],
             ),
           ),

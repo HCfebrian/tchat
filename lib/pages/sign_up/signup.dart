@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../pages/sign_up/signup_view.dart';
-import '../../utils/platform_infos.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/pages/sign_up/signup_view.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../../utils/localized_exception_extension.dart';
 
 class SignupPage extends StatefulWidget {

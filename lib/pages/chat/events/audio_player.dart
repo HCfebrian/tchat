@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:matrix/matrix.dart';
 import 'package:path_provider/path_provider.dart';
 
-import '../../../config/app_config.dart';
-import '../../../utils/localized_exception_extension.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/utils/error_reporter.dart';
+import 'package:fluffychat/utils/localized_exception_extension.dart';
 import '../../../utils/matrix_sdk_extensions/event_extension.dart';
 
 class AudioPlayerWidget extends StatefulWidget {
@@ -132,14 +132,10 @@ class AudioPlayerState extends State<AudioPlayerWidget> {
     } else {
       await audioPlayer.setAudioSource(MatrixFileAudioSource(matrixFile!));
     }
-    audioPlayer.play().catchError((e, s) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(L10n.of(context)!.oopsSomethingWentWrong),
-        ),
-      );
-      Logs().w('Error while playing audio', e, s);
-    });
+    audioPlayer.play().onError(
+          ErrorReporter(context, 'Unable to play audio message')
+              .onErrorCallback,
+        );
   }
 
   static const double buttonSize = 36;

@@ -3,20 +3,19 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:matrix/matrix.dart';
-import 'package:matrix_link_text/link_text.dart';
 import 'package:video_player/video_player.dart';
 
-import '../../../config/app_config.dart';
-import '../../pages/story/story_page.dart';
-import '../../../utils/date_time_extension.dart';
-import '../../utils/localized_exception_extension.dart';
-import '../../utils/platform_infos.dart';
-import '../../../utils/string_color.dart';
-import '../../utils/url_launcher.dart';
-import '../../../widgets/mxc_image.dart';
+import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/pages/story/story_page.dart';
+import 'package:fluffychat/utils/date_time_extension.dart';
+import 'package:fluffychat/utils/localized_exception_extension.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/string_color.dart';
+import 'package:fluffychat/utils/url_launcher.dart';
+import 'package:fluffychat/widgets/avatar.dart';
 import '../../config/themes.dart';
-import '../../widgets/avatar.dart';
 
 class StoryView extends StatelessWidget {
   final StoryPageController controller;
@@ -274,12 +273,13 @@ class StoryView extends StatelessWidget {
                     controller.storyThemeData.alignmentY.toDouble() / 100,
                   ),
                   child: SafeArea(
-                    child: LinkText(
+                    child: Linkify(
                       text: controller.loadingMode
                           ? L10n.of(context)!.loadingPleaseWait
                           : event.content.tryGet<String>('body') ?? '',
                       textAlign: TextAlign.center,
-                      onLinkTap: (url) => UrlLauncher(context, url).launchUrl(),
+                      onOpen: (url) =>
+                          UrlLauncher(context, url.url).launchUrl(),
                       linkStyle: TextStyle(
                         fontSize: 24,
                         color: Colors.blue.shade50,
@@ -289,7 +289,7 @@ class StoryView extends StatelessWidget {
                             ? null
                             : textShadows,
                       ),
-                      textStyle: TextStyle(
+                      style: TextStyle(
                         fontSize: 24,
                         color: Colors.white,
                         shadows: event.messageType == MessageTypes.Text

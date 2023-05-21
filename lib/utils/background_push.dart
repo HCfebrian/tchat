@@ -32,9 +32,9 @@ import 'package:matrix/matrix.dart';
 import 'package:unifiedpush/unifiedpush.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../utils/matrix_sdk_extensions/client_stories_extension.dart';
-import '../../utils/push_helper.dart';
-import '../../../config/app_config.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/client_stories_extension.dart';
+import 'package:fluffychat/utils/push_helper.dart';
+import '../config/app_config.dart';
 import '../config/setting_keys.dart';
 import 'famedlysdk_store.dart';
 import 'platform_infos.dart';
@@ -60,7 +60,7 @@ class BackgroundPush {
   Future<void> loadLocale() async {
     // inspired by _lookupL10n in .dart_tool/flutter_gen/gen_l10n/l10n.dart
     l10n ??= (context != null ? L10n.of(context!) : null) ??
-        (await L10n.delegate.load(window.locale));
+        (await L10n.delegate.load(PlatformDispatcher.instance.locale));
   }
 
   final pendingTests = <String, Completer<void>>{};

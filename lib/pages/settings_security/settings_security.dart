@@ -11,9 +11,9 @@ import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:intl/intl.dart';
 import 'package:matrix/matrix.dart';
 
-import '../../config/setting_keys.dart';
-import '../../utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import '../../../widgets/matrix.dart';
+import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:fluffychat/widgets/matrix.dart';
 import '../bootstrap/bootstrap_dialog.dart';
 import 'settings_security_view.dart';
 
