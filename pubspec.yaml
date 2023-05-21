@@ -117,11 +117,11 @@ flutter_native_splash:
 flutter:
   generate: true
   uses-material-design: true
-  assets:
-    - assets/
-    - assets/sounds/
-    - assets/js/
-    - assets/js/package/
+#  assets:
+#    - assets/
+#    - assets/sounds/
+#    - assets/js/
+#    - assets/js/package/
 
 
 msix_config:
