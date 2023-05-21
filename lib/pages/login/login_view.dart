@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 
-import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import  '../../widgets/layouts/login_scaffold.dart';
+import  '../../widgets/matrix.dart';
 import 'login.dart';
 
 class LoginView extends StatelessWidget {

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/utils/fluffy_share.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import  '../../config/app_config.dart';
+import  '../../utils/fluffy_share.dart';
+import  '../../utils/platform_infos.dart';
+import  '../../widgets/avatar.dart';
+import '../../widgets/matrix.dart';
 import 'settings.dart';
 
 class SettingsView extends StatelessWidget {

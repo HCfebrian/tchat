@@ -5,24 +5,24 @@ import 'package:flutter/material.dart';
 
 import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/matrix.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/pages/story/story_view.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/date_time_extension.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/client_stories_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/ios_badge_client_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/utils/room_status_extension.dart';
-import 'package:fluffychat/utils/story_theme_data.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import  '../../pages/story/story_view.dart';
+import  '../../utils/adaptive_bottom_sheet.dart';
+import  '../../utils/date_time_extension.dart';
+import  '../../utils/localized_exception_extension.dart';
+import  '../../utils/matrix_sdk_extensions/client_stories_extension.dart';
+import  '../../utils/matrix_sdk_extensions/ios_badge_client_extension.dart';
+import  '../../utils/platform_infos.dart';
+import  '../../utils/room_status_extension.dart';
+import  '../../utils/story_theme_data.dart';
+import  '../../widgets/avatar.dart';
+import  '../../widgets/matrix.dart';
 
 class StoryPage extends StatefulWidget {
   const StoryPage({Key? key}) : super(key: key);

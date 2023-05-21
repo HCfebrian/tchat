@@ -4,13 +4,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adaptive_dialog/adaptive_dialog.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import  '../../config/app_config.dart';
+import  '../../utils/localized_exception_extension.dart';
+import  '../../utils/platform_infos.dart';
 
 class ErrorReporter {
   final BuildContext context;

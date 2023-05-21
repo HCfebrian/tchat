@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 class PermissionsListTile extends StatelessWidget {

@@ -5,8 +5,8 @@ import 'package:matrix/matrix.dart' as sdk;
 import 'package:matrix/matrix.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/pages/new_space/new_space_view.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import  '../../pages/new_space/new_space_view.dart';
+import  '../../widgets/matrix.dart';
 
 class NewSpace extends StatefulWidget {
   const NewSpace({Key? key}) : super(key: key);

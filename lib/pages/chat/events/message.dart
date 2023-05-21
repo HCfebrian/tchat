@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 import 'package:swipe_to_action/swipe_to_action.dart';
+import 'package:tchat/utils/date_time_extension.dart';
+import 'package:tchat/utils/string_color.dart';
 
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/utils/date_time_extension.dart';
-import 'package:fluffychat/utils/string_color.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/matrix.dart';
 import '../../../config/app_config.dart';
+import '../../../config/themes.dart';
+import '../../../widgets/avatar.dart';
+import '../../../widgets/matrix.dart';
 import 'message_content.dart';
 import 'message_reactions.dart';
 import 'reply_content.dart';

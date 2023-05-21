@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/pages/chat/chat.dart';
-import 'package:fluffychat/pages/chat/events/message.dart';
-import 'package:fluffychat/pages/chat/seen_by_row.dart';
-import 'package:fluffychat/pages/chat/typing_indicators.dart';
-import 'package:fluffychat/pages/user_bottom_sheet/user_bottom_sheet.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import  '../../config/themes.dart';
+import  '../../pages/chat/chat.dart';
+import  '../../pages/chat/events/message.dart';
+import  '../../pages/chat/seen_by_row.dart';
+import  '../../pages/chat/typing_indicators.dart';
+import  '../../pages/user_bottom_sheet/user_bottom_sheet.dart';
+import  '../../utils/adaptive_bottom_sheet.dart';
+import  '../../utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
+import  '../../utils/platform_infos.dart';
 
 class ChatEventList extends StatelessWidget {
   final ChatController controller;

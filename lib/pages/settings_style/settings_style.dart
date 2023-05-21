@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:file_picker/file_picker.dart';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/widgets/theme_builder.dart';
+import  '../../config/app_config.dart';
+import  '../../config/setting_keys.dart';
+import  '../../widgets/theme_builder.dart';
 import '../../widgets/matrix.dart';
 import 'settings_style_view.dart';
 

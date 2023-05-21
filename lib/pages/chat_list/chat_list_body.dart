@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
 import 'package:animations/animations.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:fluffychat/pages/chat_list/chat_list.dart';
-import 'package:fluffychat/pages/chat_list/chat_list_item.dart';
-import 'package:fluffychat/pages/chat_list/search_title.dart';
-import 'package:fluffychat/pages/chat_list/space_view.dart';
-import 'package:fluffychat/pages/chat_list/start_chat_fab.dart';
-import 'package:fluffychat/pages/chat_list/stories_header.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/client_stories_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:fluffychat/utils/stream_extension.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/profile_bottom_sheet.dart';
-import 'package:fluffychat/widgets/public_room_bottom_sheet.dart';
+import  '../../pages/chat_list/chat_list.dart';
+import  '../../pages/chat_list/chat_list_item.dart';
+import  '../../pages/chat_list/search_title.dart';
+import  '../../pages/chat_list/space_view.dart';
+import  '../../pages/chat_list/start_chat_fab.dart';
+import  '../../pages/chat_list/stories_header.dart';
+import  '../../utils/adaptive_bottom_sheet.dart';
+import  '../../utils/matrix_sdk_extensions/client_stories_extension.dart';
+import  '../../utils/matrix_sdk_extensions/matrix_locals.dart';
+import  '../../utils/stream_extension.dart';
+import  '../../widgets/avatar.dart';
+import  '../../widgets/profile_bottom_sheet.dart';
+import  '../../widgets/public_room_bottom_sheet.dart';
 import '../../config/themes.dart';
 import '../../widgets/connection_status_header.dart';
 import '../../widgets/matrix.dart';

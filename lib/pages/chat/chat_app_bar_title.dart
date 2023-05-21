@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/pages/chat/chat.dart';
-import 'package:fluffychat/pages/user_bottom_sheet/user_bottom_sheet.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:fluffychat/widgets/avatar.dart';
+import  '../../pages/chat/chat.dart';
+import  '../../pages/user_bottom_sheet/user_bottom_sheet.dart';
+import  '../../utils/adaptive_bottom_sheet.dart';
+import  '../../utils/matrix_sdk_extensions/matrix_locals.dart';
+import  '../../widgets/avatar.dart';
 
 class ChatAppBarTitle extends StatelessWidget {
   final ChatController controller;

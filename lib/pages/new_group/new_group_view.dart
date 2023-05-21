@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 
-import 'package:fluffychat/pages/new_group/new_group.dart';
-import 'package:fluffychat/widgets/layouts/max_width_body.dart';
+import  '../../pages/new_group/new_group.dart';
+import  '../../widgets/layouts/max_width_body.dart';
 
 class NewGroupView extends StatelessWidget {
   final NewGroupController controller;

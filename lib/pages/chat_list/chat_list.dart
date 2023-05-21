@@ -5,22 +5,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adaptive_dialog/adaptive_dialog.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/matrix.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/pages/chat_list/chat_list_view.dart';
-import 'package:fluffychat/pages/settings_security/settings_security.dart';
-import 'package:fluffychat/utils/famedlysdk_store.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/client_stories_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import  '../../config/app_config.dart';
+import  '../../config/themes.dart';
+import  '../../pages/chat_list/chat_list_view.dart';
+import  '../../pages/settings_security/settings_security.dart';
+import  '../../utils/famedlysdk_store.dart';
+import  '../../utils/localized_exception_extension.dart';
+import  '../../utils/matrix_sdk_extensions/client_stories_extension.dart';
+import  '../../utils/matrix_sdk_extensions/matrix_locals.dart';
+import  '../../utils/platform_infos.dart';
 import '../../../utils/account_bundles.dart';
 import '../../utils/matrix_sdk_extensions/matrix_file_extension.dart';
 import '../../utils/url_launcher.dart';
@@ -29,7 +29,7 @@ import '../../widgets/fluffy_chat_app.dart';
 import '../../widgets/matrix.dart';
 import '../bootstrap/bootstrap_dialog.dart';
 
-import 'package:fluffychat/utils/tor_stub.dart'
+import  '../../utils/tor_stub.dart'
     if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 
 enum SelectMode {

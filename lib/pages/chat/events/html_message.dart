@@ -8,9 +8,9 @@ import 'package:flutter_html_table/flutter_html_table.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/widgets/avatar.dart';
+import '../../../config/app_config.dart';
 import '../../../utils/url_launcher.dart';
+import '../../../widgets/avatar.dart';
 
 class HtmlMessage extends StatelessWidget {
   final String html;

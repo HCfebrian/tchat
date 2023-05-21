@@ -2,14 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import '../../gen_l10n/l10n.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'package:fluffychat/pages/new_private_chat/new_private_chat.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/widgets/layouts/max_width_body.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import  '../../pages/new_private_chat/new_private_chat.dart';
+import  '../../utils/platform_infos.dart';
+import  '../../widgets/layouts/max_width_body.dart';
+import  '../../widgets/matrix.dart';
 
 class NewPrivateChatView extends StatelessWidget {
   final NewPrivateChatController controller;

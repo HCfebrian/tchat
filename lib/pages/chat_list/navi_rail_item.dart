@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:fluffychat/config/app_config.dart';
+import  '../../config/app_config.dart';
 import '../../config/themes.dart';
 
 class NaviRailItem extends StatelessWidget {

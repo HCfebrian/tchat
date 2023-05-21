@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 
-import 'package:fluffychat/config/themes.dart';
+import  '../../config/themes.dart';
 import 'chat.dart';
 
 class ChatEmojiPicker extends StatelessWidget {
