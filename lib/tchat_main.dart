@@ -12,7 +12,7 @@ import 'utils/background_push.dart';
 import 'widgets/fluffy_chat_app.dart';
 import 'widgets/lock_screen.dart';
 
-void main() async {
+void tchatMain() async {
   // Our background push shared isolate accesses flutter-internal things very early in the startup proccess
   // To make sure that the parts of flutter needed are started up already, we need to ensure that the
   // widget bindings are initialized already.
