@@ -59,12 +59,12 @@ class NewPrivateChatView extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      QrImage(
-                        data:
-                            'https://matrix.to/#/${Matrix.of(context).client.userID}',
-                        version: QrVersions.auto,
-                        size: qrCodeSize,
-                      ),
+                      // QrImage(
+                      //   data:
+                      //       'https://matrix.to/#/${Matrix.of(context).client.userID}',
+                      //   version: QrVersions.auto,
+                      //   size: qrCodeSize,
+                      // ),
                       TextButton.icon(
                         style: TextButton.styleFrom(
                           fixedSize:
