@@ -23,8 +23,8 @@ class ErrorReporter {
     final consent = await showOkCancelAlertDialog(
       context: context,
       title: error.toLocalizedString(context),
-      message: L10n.of(context)!.reportErrorDescription,
-      okLabel: L10n.of(context)!.report,
+      message: "reportErrorDescription",
+      okLabel: "report",
       cancelLabel: L10n.of(context)!.close,
     );
     if (consent != OkCancelResult.ok) return;

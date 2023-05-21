@@ -18,7 +18,7 @@ class NotificationSettingsItem {
     NotificationSettingsItem(
       PushRuleKind.underride,
       '.m.rule.message',
-      (c) => L10n.of(c)!.allRooms,
+      (c) => "All Room",
     ),
     NotificationSettingsItem(
       PushRuleKind.underride,
