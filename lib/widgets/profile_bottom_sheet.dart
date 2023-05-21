@@ -5,7 +5,6 @@ import 'package:future_loading_dialog/future_loading_dialog.dart';
 import 'package:matrix/matrix.dart';
 import 'package:vrouter/vrouter.dart';
 
-import '../../../widgets/mxc_image.dart';
 import '../../../widgets/matrix.dart';
 import 'avatar.dart';
 
