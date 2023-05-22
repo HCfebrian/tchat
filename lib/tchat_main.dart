@@ -36,5 +36,19 @@ void tchatMain() async {
         .addAll(Uri.parse(html.window.location.href).queryParameters);
   }
 
-
+  runApp(
+    PlatformInfos.isMobile
+        ? AppLock(
+            builder: (args) => FluffyChatApp(
+              clients: clients,
+              queryParameters: queryParameters,
+            ),
+            lockScreen: const LockScreen(),
+            enabled: false,
+          )
+        : FluffyChatApp(
+            clients: clients,
+            queryParameters: queryParameters,
+          ),
+  );
 }

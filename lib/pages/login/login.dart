@@ -248,23 +248,6 @@ class LoginController extends State<Login> {
 }
 
 
-// =========================
-class LoginCustom extends Login {
-  const LoginCustom({Key? key}) : super(key: key);
-
-  @override
-  LoginController createState() => LoginControllerCustom();
-}
-
-class LoginControllerCustom extends LoginController{
-  @override
-  void login() {
-    // TODO: implement login
-    super.login();
-  }
-
-}
-
 
 
 
