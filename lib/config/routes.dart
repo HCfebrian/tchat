@@ -263,7 +263,7 @@ class AppRoutes {
           stackedRoutes: [
             VWidget(
               path: 'login',
-              widget: const LoginCustom(),
+              widget: const Login(),
               buildTransition: _fadeTransition,
             ),
             VWidget(
@@ -273,7 +273,7 @@ class AppRoutes {
               stackedRoutes: [
                 VWidget(
                   path: 'login',
-                  widget: LoginCustom(),
+                  widget: Login(),
                   buildTransition: _fadeTransition,
                 ),
                 VWidget(
@@ -355,7 +355,7 @@ class AppRoutes {
           stackedRoutes: [
             VWidget(
               path: 'login',
-              widget: const LoginCustom(),
+              widget: const Login(),
               buildTransition: _fadeTransition,
             ),
             VWidget(
@@ -365,7 +365,7 @@ class AppRoutes {
               stackedRoutes: [
                 VWidget(
                   path: 'login',
-                  widget: const LoginCustom(),
+                  widget: const Login(),
                   buildTransition: _fadeTransition,
                 ),
                 VWidget(
